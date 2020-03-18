@@ -7,7 +7,7 @@ RUN sudo apt-get update \
     ca-certificates \
     curl \
     gcc \
-    openssh
+    openssh \
     && sudo rm -rf /var/lib/apt/lists/*
     
 RUN flutter channel beta
