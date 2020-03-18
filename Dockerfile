@@ -1,15 +1,15 @@
 FROM cirrusci/flutter:stable-web
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache \
+RUN sudo apt-get update \
+    && sudo apt-get install -y --no-cache \
     bash \
     git \
     ca-certificates \
     curl \
     gcc \
     openssh
-
-RUN apk del gcc musl-dev && rm -R -f /root/.cache
+    && sudo rm -rf /var/lib/apt/lists/*
+    
 RUN flutter channel beta
 RUN flutter upgrade
 RUN flutter config --enable-web
