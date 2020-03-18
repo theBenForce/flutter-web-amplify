@@ -15,6 +15,9 @@ RUN apk update && apk upgrade && \
     openssh
 
 RUN apk del gcc musl-dev && rm -R -f /root/.cache
+RUN flutter channel beta
+RUN flutter upgrade
+RUN flutter config --enable-web
 
 COPY files /
 
