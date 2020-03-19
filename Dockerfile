@@ -1,7 +1,7 @@
 FROM cirrusci/flutter:stable-web
 
 RUN sudo apt-get update \
-    && sudo apt-get install -y --no-cache \
+    && sudo apt-get install -y \
     git \
     ca-certificates \
     openssh
