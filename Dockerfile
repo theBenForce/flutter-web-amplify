@@ -4,7 +4,7 @@ RUN sudo apt-get update \
     && sudo apt-get install -y \
     git \
     ca-certificates \
-    openssh
+    openssh-client
     
 RUN flutter channel beta
 RUN flutter upgrade
